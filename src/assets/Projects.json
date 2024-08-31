@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Juniper",
+        "techStack": ["AWS", "PostgreSQL", "React Native", "Postman"],
+        "description": ""
+    },
+    {
+        "name": "DartPath",
+        "techStack": ["Firebase", "ReactJS"],
+        "description": ""
+    },
+    {
+        "name": "Dineable",
+        "techStack": ["Firestore", "React Native"],
+        "description": ""
+    },
+    {
+        "name": "Dineable",
+        "techStack": ["Firestore", "React Native"],
+        "description": ""
+    },
+    {
+        "name": "Dineable",
+        "techStack": ["Firestore", "React Native"],
+        "description": ""
+    },
+    {
+        "name": "Dineable",
+        "techStack": ["Firestore", "React Native"],
+        "description": ""
+    }
+]
