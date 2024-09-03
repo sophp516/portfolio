@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'RetroPixel';
+    src: url('../assets/fonts/ARCADECLASSIC.TTF') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'main';
+    src: url('../assets/fonts/Mulish-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.background {
+    width: 100vw;
+    height: calc(100vh - 8rem);
+    margin-top: 8rem;
+    background-color: #05202A;
+    overflow: scroll;
+}
+
+.intro {
+    background-color: #F5F0E6;
+    border-radius: 5px;
+    border: 2px solid #2C2A32;
+    margin: 1.4rem 1.2rem;
+    padding: 1rem;
+    z-index: 0;
+}
+
+.intro-bar {
+    position: relative;
+    height: 2rem;
+    background-color: #f08080;
+    border: 2px solid #2C2A32;
+    border-radius: 3px;
+    box-shadow: 
+        4px 4px 0px 0px #2C2A32,
+        4px 4px 0px 0px #2C2A32;
+}
+
+.intro-icon-container {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 4px;
+}
+
+.intro-icon {
+    border: 1.5px solid #2C2A32;
+    background-color: #F5F0E6;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+}
+
+
+.skills-container {
+    margin: 0 1.2rem;
+    max-width: 40rem;
+    min-width: 20rem;
+    padding-right: 1.6rem;
+    padding-bottom: 2rem;
+    border-radius: 5px;
+}
+
+.skills-subcontainer {
+    background-color: #f08080;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    width: 100%; /* Ensure the container takes full width */
+    padding-top: 1rem;
+    border-radius: 0px 0px 5px 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 0.8fr); /* Create 3 equal-width columns */
+    gap: 25px;
+}
+
+.skills-header {
+    display: inline-block;
+    background-color: #f08080;
+    font-family: 'RetroPixel', sans-serif;
+    font-size: 2.4rem;
+    color: #faf8f4;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+    border-radius: 5px 5px 0px 0px;
+    margin: 0;
+}
+
+.skills-box {
+    font-family: 'main';
+    background-color: #faf8f4;
+    display: flex;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    text-align: center;
+    width: 90%;
+    padding: 5px;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+    white-space: normal;
+    box-shadow: 
+        4px 4px 0px 0px #2C2A32,
+        6px 6px 0px 0px #2C2A32;
+}
+
+.link-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.link-container {
+    padding: 0.1rem 0.5rem;
+    border: 2px solid #2C2A32;
+    background-color: #F5F0E6;
+    margin-right: 0.5rem;
+    border-radius: 7%;
+}
+
+.link-container:hover {
+    background-color: #FF9E8A;
+    color: #2C2A32;
+}
+
+a {
+    color: #05202A;
+    text-decoration: none;
+}
+
+.intro-paragraph {
+    font-family: 'main';
+    font-size: 1.1rem;
+    margin: 30px 10px;
+}
+
+.download-button {
+    width: 50px;
+    height: 50px;
+    background: none; /* Remove default background */
+    border: none;     /* Remove default border */
+    padding: 0;       /* Remove default padding */
+    margin: 0;        /* Remove default margin */
+    cursor: pointer;  /* Add a pointer cursor on hover */
+    outline: none; 
+    background: inherit;
+}
+
+.download-button > img {
+    width: 70px;
+    height: 70px;
+}
+
+.download-button {
+    color: #F5F0E6;
+    font-family: 'retroPixel';
+}
+
+.download-button > p:hover {
+    color: #FF9E8A;
+}
+
+.resume-container {
+
+}

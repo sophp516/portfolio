@@ -1,32 +1,58 @@
 [
     {
+        "id": 1,
         "name": "Juniper",
         "techStack": ["AWS", "PostgreSQL", "React Native", "Postman"],
-        "description": ""
+        "description": "My friends and I developed a full-stack e-commerce application focused on eco-friendly clothing options, utilizing PostgreSQL and AWS for the database, and React for the frontend. The application includes machine learning features that allow users to scan or upload images of clothing items, which the algorithm matches with eco-friendly alternatives. We collaborated with various clothing companies to explore potential partnerships for expanding the app's eco-friendly product offerings.",
+        "image": "src/assets/juniper.jpg"
     },
     {
+        "id": 2,
         "name": "DartPath",
-        "techStack": ["Firebase", "ReactJS"],
-        "description": ""
+        "techStack": ["Firebase", "ReactJS", "React Query"],
+        "description": "Dartpath is a course planning and sharing website tailored to Dartmouth's unique quarterly academic system. I worked on this project during my freshman year as part of the WISP (Women in STEM Project) internship. Alongside three fellow interns, we designed and developed the website over two terms (20 weeks). Built with React, Firebase, and React Query, Dartpath allows students to plan their courses and share their academic journey. My proudest achievement was successfully implementing the drag-and-drop functionality on the course planning page, allowing users to easily organize their classes and terms.",
+        "image": "src/assets/wisp.png"
     },
-    {
+    {   
+        "id": 3,
         "name": "Dineable",
         "techStack": ["Firestore", "React Native"],
-        "description": ""
+        "description": "Dineable is a dining and food review app developed as part of my team's work during the SEEDS app development internship. Built with Expo and React Native, the app includes social media features that enable students to share college-specific food information, promoting a healthier and more enjoyable campus dining experience. The app fetches food data from college APIs and was created using React Native and Firestore.",
+        "image": "src/assets/dineable.jpg"
+    },
+    {   
+        "id": 4,
+        "name": "Vox Sportswear",
+        "techStack": ["Firestore", "React Native"],
+        "description": "Vox Sportswear is a student-owned and operated business that has been offering custom screen-printed and embroidered gear to the Dartmouth community and beyond since 1994. My team at DTCG (Dartmouth Tech Consulting Group) collaborated with the students at Vox to create an e-commerce website, streamlining their business and enabling online sales of their products. I was responsible for the backend development, including authentication, role-based access control, and payment processing. We integrated Stripe for payment processing using the Firebase extension.",
+        "image": "src/assets/vox.jpeg"
+    },
+    {   
+        "id": 5,
+        "name": "FoodWars",
+        "techStack": ["MongoDB", "Express", "Node", "ReactJS"],
+        "description": "FoodWars is a full-stack website I developed as part of my application to the DALI (Digital Applied Learning and Innovation) Lab. The site fetches random food keywords from an API and encourages users to create and post recipes based on the keyword. Recipe submissions are ranked daily based on their health score, which is calculated using a food API. The project utilizes MongoDB, Node.js, Express, JWT tokens for database management/backend authentication, and ReactJS for the frontend.",
+        "image": "src/assets/food.jpg"
     },
     {
-        "name": "Dineable",
-        "techStack": ["Firestore", "React Native"],
-        "description": ""
+        "id": 6,
+        "name": "3D modeling",
+        "techStack": ["Maya", "Adobe AE"],
+        "description": "During my freshman fall term, I took COSC22: Intro to 3D Modeling, where I learned the fundamentals of 3D modeling, including design creation, rigging character models, rendering, adding textures, and creating 3D animations.",
+        "image": "src/assets/modeling.png"  
     },
     {
-        "name": "Dineable",
-        "techStack": ["Firestore", "React Native"],
-        "description": ""
+        "id": 7,
+        "name": "digital art",
+        "techStack": ["Photoshop", "Procreate"],
+        "description": "In my free time, I enjoy drawing, with digital art being my preferred medium. I create digital illustrations and cartoons (webtoons), primarily using Procreate and Clip Studio Paint.",
+        "image": "src/assets/art.png"
     },
     {
-        "name": "Dineable",
-        "techStack": ["Firestore", "React Native"],
-        "description": ""
+        "id": 8,
+        "name": "Darthrift",
+        "techStack": ["MongoDB", "Express", "Node", "ReactJS"],
+        "description": "Darthrift was my first attempt at creating a full-stack website. Before this, I only had experience with HTML/CSS and a limited understanding of React. I followed a YouTube tutorial on building a real-time online chat website, learning as I went and incorporating several of my own unique features. The project was built using the MERN stack.",
+        "image": "src/assets/darthrift.jpg"
     }
 ]

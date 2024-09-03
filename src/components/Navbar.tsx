@@ -9,9 +9,7 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
-            <Link to="/" className="home_button_container">
-                <button className={`home_button ${currentPath === '/' ? 'selected' : ''}`}><p>Sophie Park</p></button>
-            </Link>
+            <div className={`home_button ${currentPath === '/' ? 'selected' : ''}`}><p>Sophie Park</p></div>
             <div className="nav_subContainer">
                 <Link to="/experiences" >
                     <button className={`nav_button ${currentPath === '/experiences' ? 'selected' : ''}`}><p>experiences</p></button>

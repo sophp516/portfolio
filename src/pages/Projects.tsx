@@ -1,17 +1,26 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
-import diskImage from "../assets/disk.png";
+import diskImage from "../assets/cd.png";
+import projectData from "../assets/Projects.json";
 import "./Projects.css";
+
+interface Project {
+    id: number,
+    name: string,
+    techStack: string[],
+    description: string,
+    image: string,
+}
 
 const Projects = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const rotationRef = useRef(0);
-    const [projects, setProjects] = useState<string[]>([]);
-    const [selectedProject, setSelectedProject] = useState('');
+    const [projects, setProjects] = useState<Project[]>([]);
+    const [selectedProject, setSelectedProject] = useState<number | null>(null);
     const projectAnglesRef = useRef<{ [key: string]: number }>({});
 
     useEffect(() => {
-        setProjects(['one', 'two', 'three', 'four', 'five']);
+        setProjects(projectData);
     }, []);
 
     useEffect(() => {
@@ -34,7 +43,7 @@ const Projects = () => {
                 // Set initial rotation to face the center
                 itemElement.style.transform = `translate(-50%, -50%) rotate(${itemAngle + 90}deg)`;
 
-                projectAnglesRef.current[projects[index]] = itemAngle;
+                projectAnglesRef.current[projects[index].id] = itemAngle;
             });
         }
     }, [projects]);
@@ -45,7 +54,7 @@ const Projects = () => {
         let isLeft = false;
         let isRight = false;
         let currentSpeed = 0;
-        const targetSpeed = { left: -0.7, right: 0.7, stop: 0 };
+        const targetSpeed = { left: -1, right: 1, stop: 0 };
         const smoothing = 0.02;
 
         const handleMouseMove = (e: MouseEvent) => {
@@ -57,7 +66,7 @@ const Projects = () => {
         };
 
         const animate = () => {
-            if (!selectedProject) { // Only animate if no project is selected
+            if (selectedProject === null) { // Only animate if no project is selected
                 let targetRotationSpeed = targetSpeed.stop;
                 if (isLeft) targetRotationSpeed = targetSpeed.left;
                 else if (isRight) targetRotationSpeed = targetSpeed.right;
@@ -86,7 +95,7 @@ const Projects = () => {
         let animationFrameId: number;
 
         const stopRotation = () => {
-            if (selectedProject) {
+            if (selectedProject !== null) {
                 // Calculate the target angle for the selected project
                 const targetAngle = (360 - projectAnglesRef.current[selectedProject] - 90) % 360;
                 const diff = targetAngle - rotationRef.current;
@@ -112,7 +121,7 @@ const Projects = () => {
             animationFrameId = requestAnimationFrame(stopRotation);
         };
 
-        if (selectedProject) {
+        if (selectedProject !== null) {
             animationFrameId = requestAnimationFrame(stopRotation);
         }
 
@@ -121,21 +130,45 @@ const Projects = () => {
         };
     }, [selectedProject, projects]);
 
-    const handleSelection = (projectNumber: string) => {
-        setSelectedProject(selectedProject === projectNumber ? '' : projectNumber);
+    const handleSelection = (projectNumber: number) => {
+        setSelectedProject(selectedProject === projectNumber ? null : projectNumber);
     };
 
     return (
-        <div>
+        <div className="projects">
             <Navbar />
             <div className="project-container">
+                <div className="star"></div>
+                <div className="star"></div>
+                <div className="star"></div>
+                {selectedProject &&
+                <div className="selected-container">
+                {selectedProject &&
+                <div className="description-container">
+                    <div className="stack-container">
+                        {projects[selectedProject - 1].techStack.map((tech, i) => {
+                            return (
+                                <div className="stack-bubble" key={i}>
+                                    <p>{tech}</p>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <p className="project-description">{projects[selectedProject - 1].description}</p>
+                </div>}
+                </div>}
                 <div className="circle-wrapper">
                     <div ref={containerRef} className="circle">
                         {projects.map((projectItem, i) => (
-                            <div key={i} className={`project-item ${selectedProject === projectItem ? 'selected' : ''}`} onClick={() => handleSelection(projectItem)}>
-                                <img src={diskImage} alt="disk" />
+                            <div key={i} className={`project-item ${selectedProject === projectItem.id ? 'selected' : ''}`} onClick={() => handleSelection(projectItem.id)}>
+                                <img className="disk-base" src={diskImage} alt="disk" />
+                                {projectItem.image && (
+                                    <div className="project-image">
+                                        <img className={`${selectedProject === projectItem.id ? 'selected' : ''}`} src={projectItem.image} alt={projectItem.name} />
+                                    </div>
+                                )}
                                 <div className="disk-cover">
-                                    <p>{projectItem}</p>
+                                    <p>{projectItem.name}</p>
                                 </div>
                             </div>
                         ))}

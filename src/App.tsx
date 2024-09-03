@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Background from './pages/Background';
 import Experiences from './pages/Experiences';
@@ -12,7 +11,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Background />}></Route>
         <Route path="/projects" element={<Projects />}></Route>
         <Route path="/background" element={<Background />}></Route>
         <Route path="/experiences" element={<Experiences />}></Route>

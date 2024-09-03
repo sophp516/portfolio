@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'RetroPixel';
+    src: url('../assets/fonts/ARCADECLASSIC.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'main';
+    src: url('../assets/fonts/Mulish-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.experiences {
+    background-color: #05202A;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.experiences-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+    margin-top: 8rem;
+    margin-right: 1rem;
+}
+
+.experiences-div {
+    border-left: 1rem solid #f08080;
+    padding-left: 3rem;
+    padding-bottom: 5rem;
+}
+
+.experiences-div p {
+    margin: 0; /* Remove default margin from the <p> tag */
+    line-height: 1;
+}
+
+.experiences-position {
+   padding-bottom: 1rem;
+}
+
+.experiences-div:nth-child(1) {
+    padding-top: 5rem;
+}
+
+.experiences-name {
+    color: #EEEDE7;
+    font-family: 'retroPixel';
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.experiences-position {
+    color: #EEEDE7;
+    font-family: 'main';
+}
+
+.experiences-description {
+    color: #EEEDE7;
+    font-family: 'main';
+}
+
+.margin1 {
+    margin-left: 11px;
+}
+
+.margin2 {
+    margin-left: 19px;
+}

@@ -1,17 +1,26 @@
+@font-face {
+    font-family: 'RetroPixel';
+    src: url('../assets/fonts/ARCADECLASSIC.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .navbar {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    background-color: aqua;
+    background-color: #05202A;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 1.4rem;
     padding-bottom: 0.1rem;
+    color: #EEEDE7;
+    border-bottom: 0.1rem solid #EEEDE7;
+    z-index: 100;
 }
-
 
 .home_button_container {
     margin: 0 auto;
@@ -25,23 +34,25 @@
 }
 
 .home_button > p {
-    font-size: 1.3em;
+    font-size: 2.3em;
+    font-family: 'RetroPixel', sans-serif;
     margin: 0;
     padding: 0;
+    color: #EEEDE7;
 }
 
 .home_button > p:hover {
-    color: white;
+    color: #f08080;
 }
 
 .nav_subContainer {
-    width: calc(100% - 20rem);
-    margin: 1rem auto;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
     padding: 0;
     box-sizing: border-box;
 }
@@ -54,11 +65,15 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    margin: none;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     padding: 0;
+    color: #EEEDE7;
 }
 
 .nav_button > p {
+    font-family: 'RetroPixel', sans-serif;
+    font-size: 1.2rem;
     margin: 0;
     position: relative;
     padding: 0;
@@ -68,7 +83,7 @@
 }
 
 .nav_button:hover {
-    color:cadetblue;
+    color:lightcoral;
 }
 
 .nav_button::after {
@@ -78,11 +93,11 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: black;
+    background-color: #EEEDE7;
     transition: background-color 0.3s ease;
 }
 
 .nav_button.selected {
-    background-color: lightcoral; 
-    color: white;
+    background-color: #f08080; 
+    color: #EEEDE7;
 }
