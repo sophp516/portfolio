@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import diskImage from "../assets/cd.png";
 import projectData from "../assets/Projects.json";
