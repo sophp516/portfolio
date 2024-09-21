@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import "./Background.css"
 
 const Background = () => {
+
     return (
         <div className="background">
             <Navbar />
@@ -13,7 +14,7 @@ const Background = () => {
                             <div className="intro-icon">-</div>
                         </div>
                     </div>
-                    <p className="intro-paragraph"><span className="greeting">Hi! </span>My name is Sophie Park and I am a Korean American full stack developer studying Computer Science </p>
+                    <p className="intro-paragraph"><span className="greeting">Hi! </span>Hi! My name is Sophie Park, and I am a Korean American full stack developer studying Computer Science and Human-Centered Design at Dartmouth College. I have a strong passion for the intersection of technology and design, which drives my commitment to creating engaging user experiences. I thrive in collaborative, multidisciplinary environments. I believe in the power of technology to enhance human interactions, and I’m excited to explore new challenges and opportunities that allow me to blend my technical expertise with my creative interests.</p>
                     <div className="link-div">
                         <div className="link-container">
                             <a href="https://www.linkedin.com/in/sophie-m-park/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -44,13 +45,6 @@ const Background = () => {
                         <div className="skills-box">Java</div>
                         <div className="skills-box">Git</div>
                     </div>
-                </div>
-                <div className="resume-container">
-                    <button className="download-button">
-                        <div></div>
-                        <img src="src/assets/folder.png"/>
-                        <p>start download</p>
-                    </button>
                 </div>
             </div>
         </div>

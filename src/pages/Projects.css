@@ -58,8 +58,9 @@
     height: 100vw;
 }
 
+
 .circle-wrapper {
-    padding-top: 60rem;
+    padding-top: 50rem;
     max-height: calc(100vh - 5rem);
     overflow: hidden;
 }
@@ -205,8 +206,8 @@
     background-color: #f08080;
     color: #05202A;
     box-shadow: 
-        2px 3px 0px 0px #EEEDE7,
-        3px 2px 0px 0px #EEEDE7;
+        2px 2px 0px 0px #EEEDE7,
+        2px 2px 0px 0px #EEEDE7;
 }
 
 .stack-container {

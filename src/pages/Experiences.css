@@ -32,13 +32,27 @@
     padding-bottom: 5rem;
 }
 
+.experiences-first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.experiences-date {
+    color: #EEEDE7;
+    font-family: 'main';
+    padding-bottom: 13px;
+    padding-right: 2rem;
+}
+
 .experiences-div p {
     margin: 0; /* Remove default margin from the <p> tag */
-    line-height: 1;
 }
 
 .experiences-position {
-   padding-bottom: 1rem;
+   padding-bottom: 2.5rem;
+   line-height: 1;
 }
 
 .experiences-div:nth-child(1) {
@@ -46,10 +60,18 @@
 }
 
 .experiences-name {
-    color: #EEEDE7;
+    color: #f08080;
     font-family: 'retroPixel';
+    cursor: pointer;
     font-size: 2rem;
     padding-bottom: 0.5rem;
+    margin-left: 5rem;
+    line-height: 1;
+}
+
+.experiences-name:hover {
+    transform: scale(1.03);
+    transition: color 0.3s, transform 0.3s;
 }
 
 .experiences-position {
@@ -60,6 +82,7 @@
 .experiences-description {
     color: #EEEDE7;
     font-family: 'main';
+    line-height: 2;
 }
 
 .margin1 {
